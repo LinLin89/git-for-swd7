@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        .calcframe{
+            border: 2px solid black;
+            width:300px;
+            height: 400px;
+            padding:2px;
+            display: inline-block;
+        }
+        .result{
+            width:292px;
+            height:60px;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            font-size:50px;
+            text-align: right;
+            align-items: center;
+            /* padding: 0; */
+            /* margin: 2px; */
+        }
+        .btn{
+            background-color: grey;
+            color: white;
+            width:71px;
+            height: 51px;
+            font-size: 35px;
+            text-align: center;
+        }
+        .btnclr{
+            background-color: red;
+            width: 146px; 
+        }
+        .btnequal{
+            background-color: blue;   
+        }
+        .btnzero{
+            width: 146px;
+        }
+        .text{
+        text-align: center;
+        }
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="calcframe">
+        <h1 class="text">Calculator</h1>
+   
+    <input type="text" class="result" id="result" placeholder="0">
+
+    <button class="btn btnclr" id="clear" onclick="numc()">AC</button>
+    <button class="btn" id="multi" value="*" onclick="div()">/</button>
+    <button class="btn" id="div" value="/" onclick="multi()">x</button>
+ <button class="btn" id="seven" value="7" onclick="num7()">7</button>
+ <button class="btn" id="eight" value="8" onclick="num8()">8</button>
+ <button class="btn" id="nine" value="9" onclick="num9()">9</button>
+ <button class="btn" id="minus" value="-" onclick="minus()">-</button>
+ <button class="btn" id="four" value="4" onclick="num4()">4</button>
+ <button class="btn" id="five" value="5" onclick="num5()">5</button>
+ <button class="btn" id="six" value="6" onclick="num6()">6</button>
+ <button class="btn" id="add" value="+" onclick="add()">+</button>
+ <button class="btn"id="one" value="1" onclick="num1()">1</button>
+ <button class="btn" id="two" value="2" onclick="num2()">2</button>
+ <button class="btn" id="three" value="3" onclick="num3()">3</button><br>
+ <button class="btn btnzero" id="zero" value="0" onclick="num0()">0</button>
+ <button class="btn " id="dot" value="." onclick="dot()">.</button>
+ <button class="btn btnequal" id="equal" value="=" onclick="calculate()">=</button>
+    </div>
+
+
+
+
+
+
+ <script>
+     let x;
+     let rtext=document.querySelector(".result");
+     
+     function numc(){
+         document.getElementById("result").value='';
+        //  document.getElementById("result").innerHTML='';
+       
+         console.log("clear");
+     }
+    
+     function num1(){
+         x=document.getElementById("one").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num2(){
+         x=document.getElementById("two").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num3(){
+         x=document.getElementById("three").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num4(){
+         x=document.getElementById("four").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num5(){
+         x=document.getElementById("five").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num6(){
+         x=document.getElementById("six").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num7(){
+         x=document.getElementById("seven").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     } function num8(){
+         x=document.getElementById("eight").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num9(){
+         x=document.getElementById("nine").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function num0(){
+         x=document.getElementById("zero").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function dot(){
+         x=document.getElementById("dot").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function add(){
+         x=document.getElementById("add").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function minus(){
+         x=document.getElementById("minus").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function multi(){
+         x=document.getElementById("multi").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function div(){
+         x=document.getElementById("div").value;
+         document.getElementById("result").value+=x;
+         console.log(x);
+     }
+     function calculate(){
+         let calctext=rtext.value;
+         document.querySelector(".result").value=eval(calctext);
+         console.log(eval(calctext));
+     }
+    
+
+ </script>
+    
+</body>
+</html>
